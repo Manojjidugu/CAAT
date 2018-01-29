@@ -1,0 +1,105 @@
+    <div class="container">
+        <div class="row blue-header">
+            <div class="col-xs-3">
+                <img src="images/logo.png" height="100" width="100" />
+            </div>
+            <div class="col-xs-7 title">CAAT-CREDIT ALGO & ARBITRAGE TRADING</div>
+            <div class="col-xs-2">
+                <button class="btn btn-primary pull-right logoutBtn">Logout</button>
+            </div>
+        </div>
+
+        <div class="row body-container">
+            <div class="col-sm-3 no-padding">
+                <div class="nav-side-menu">
+                    <div class="brand">Menu</div>
+                    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+                    <div class="menu-list">
+                        <ul id="menu-content" class="menu-content collapse out">
+                            <li data-toggle="collapse" data-target="#trading" class="active">
+                                <a href="#"><i class="fa fa-credit-card fa-lg"></i> CREADIT TRADING <span class="arrow"></span></a>
+                            </li>
+                            <ul class="sub-menu collapse in" id="trading">
+                                <li class="active"><a href="#">Recovery Lock</a></li>
+                                <li><a href="#">Quanto CDS</a></li>
+                                <li><a href="#">CDS (Credit Index)</a></li>
+                                <li><a href="#">CDS (Single Name)</a></li>
+                                <li><a href="#">Credit Index Option</a></li>
+                                <li><a href="#">Bonds</a></li>
+                                <li><a href="#">Total Return Swap (TRS)</a></li>
+                                <li><a href="#">Credit Link Notes (CLN)</a></li>
+                            </ul>
+                            <li data-toggle="collapse" data-target="#administration" class="collapsed">
+                                <a href="#"><i class="fa fa-user fa-lg"></i> Credit Reference Administration<span class="arrow"></span></a>
+                            </li>
+                            <ul class="sub-menu collapse" id="administration">
+                                <li><a href="#">Sub item 1</a></li>
+                                <li><a href="#">Sub item 2</a></li>
+                                <li><a href="#">Sub item 3</a></li>
+                            </ul>
+
+                            <li data-toggle="collapse" data-target="#strategies" class="collapsed">
+                                <a href="#"><i class="fa fa-bar-chart fa-lg"></i> Credit Trading Strategies<span class="arrow"></span></a>
+                            </li>
+                            <ul class="sub-menu collapse" id="strategies">
+                                <li><a href="#">Sub item 1</a></li>
+                                <li><a href="#">Sub item 2</a></li>
+                                <li><a href="#">Sub item 3</a></li>
+                            </ul>
+
+                            <li data-toggle="collapse" data-target="#reports" class="collapsed">
+                                <a href="#"><i class="fa fa-area-chart fa-lg"></i> Reports<span class="arrow"></span></a>
+                            </li>
+                            <ul class="sub-menu collapse" id="reports">
+                                <li><a href="#">Sub item 1</a></li>
+                                <li><a href="#">Sub item 2</a></li>
+                                <li><a href="#">Sub item 3</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="border-frame">
+                    <div class="form-title">Recovery Lock</div>
+                    <div class="tabs-container">
+
+                        <!-- Tab panes -->
+                        
+				  <recovery-instrument
+				   template = "ngIf(currentView == 'instrument')"
+				  (onCashflow)="navigateTo('cashflow')">
+                  </recovery-instrument>
+				 
+				  
+				  <recovery-cashflow
+				  template = "ngIf(currentView == 'cashflow')"
+				  (oninstrument)="navigateTo('instrument')">
+                  </recovery-cashflow>				  
+				        
+                  </div>
+                </div>
+            </div>
+			
+       </div>
+	   <!--footer-->
+          <div class="row footer">
+            <div class="col-xs-4">
+                <img src="images/FinacleSoft.png" />
+            </div>
+            <div class="col-xs-4 title">
+                <div>
+                    <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <p class="copyrights pull-right">&copy; 2017 Finaclesoft. Rights Reserved</p>
+            </div>
+		</div>
+    </div>

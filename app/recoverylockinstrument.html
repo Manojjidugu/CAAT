@@ -1,0 +1,190 @@
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item active">
+                                <a class="nav-link" data-toggle="tab" (click)="instrument()" href="#Instrument-tab-content" role="button"><i class="fa fa-bell" aria-hidden="true"></i> Instrument</a>
+                            </li>
+							
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" (click)="cashflow()" href="#cashflow" role="button"><i class="fa fa-university" aria-hidden="true"></i>Cash Flow (Fixed)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#deal" role="tab"><i class="fa fa-thumbs-up" aria-hidden="true"></i>Deal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#fees" role="tab"><i class="fa fa-money" aria-hidden="true"></i>Fees</a>
+                            </li>
+                        </ul>
+
+
+
+
+                           <div class="tab-content">
+                            <div class="tab-pane active" id="Instrument-tab-content" role="tabpanel">
+        
+                                <div class="row">
+                                    <!-- col 1 start-->
+                                    <div class="col-md-6">
+                                        <!--input-text -->
+                                        <div class="form-group row">
+                                            <label for="type-text-input" class="col-xs-4 col-form-label">Type</label>
+                                            <div class="col-xs-8">
+                                                <input class="form-control" type="text" value="" id="type-text-input">
+                                            </div>
+                                        </div>
+                                        <!--drop-down -->
+                                        <div class="form-group row">
+                                            <label for="reference-entity-drop-down" class="col-xs-4 col-form-label">Reference Entity</label>
+                                            <div class="col-xs-8">
+                                                <select class="form-control" id="reference-entity-drop-down">
+                                            <option>IBM Corporation</option>
+                                            <option>GoogleInc.</option>
+                                          </select>
+                                            </div>
+                                        </div>
+                                        <!--drop-down -->
+                                        <div class="form-group row">
+                                            <label for="drop-down" class="col-xs-4 col-form-label">Restructuring</label>
+                                            <div class="col-xs-8">
+                                                <select class="form-control" id="restructuring-drop-down">
+                                            <option>MR</option>
+                                            <option>Daily</option>
+                                          </select>
+                                            </div>
+                                        </div>
+                                        <!--date-picker -->
+                                        <div class="form-group row">
+                                            <label for="start-date-datetimepicker" class="col-xs-4 col-form-label">Start Date</label>
+                                            <div class="col-xs-8">
+                                                <div class='input-group date' id='start-date-datetimepicker'>
+                                                    <input type='date' class="form-control" />
+                                                    <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--drop-down -->
+                                        <div class="form-group row">
+                                            <label for="payment-frequency-drop-down" class="col-xs-4 col-form-label">Payment&nbsp;Frequency</label>
+                                            <div class="col-xs-8">
+                                                <select class="form-control" id="payment-frequency-drop-down">
+                                            <option>Quarterly</option>
+                                            <option>Monthly</option>
+                                            <option>Yearly</option>
+                                          </select>
+                                            </div>
+                                        </div>
+                                        <!--drop-down -->
+                                        <div class="form-group row">
+                                            <label for="data-roll-drop-down" class="col-xs-4 col-form-label">Data Roll</label>
+                                            <div class="col-xs-8">
+                                                <select class="form-control" id="data-roll-drop-down">
+                                            <option>Modified Following</option>
+                                          </select>
+                                            </div>
+                                        </div>
+                                        <!--input-text -->
+                                        <div class="form-group row">
+                                            <label for="quantity-text-input" class="col-xs-4 col-form-label">Quantity</label>
+                                            <div class="col-xs-8">
+                                                <input class="form-control" type="text" value="" id="quantity-text-input">
+                                            </div>
+                                        </div>
+
+                                        <!--input-text -->
+                                        <div class="form-group row">
+                                            <label for="recovery-text-input" class="col-xs-4 col-form-label">Recovery</label>
+                                            <div class="col-xs-8">
+                                                <input class="form-control" type="text" value="" id="recovery-text-input">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- col 1 end-->
+                                    <!-- col 2 start-->
+                                    <div class="col-md-6">
+                                        <!--drop-down -->
+                                        <div class="form-group row">
+                                            <label for="credit-template-drop-down" class="col-xs-4 col-form-label">Credit Template</label>
+                                            <div class="col-xs-8">
+                                                <select class="form-control" id="credit-template-drop-down">
+                                            <option>SNAC</option>
+                                          </select>
+                                            </div>
+                                        </div>
+                                        <!--drop-down -->
+                                        <div class="form-group row">
+                                            <label for="seniority-drop-down" class="col-xs-4 col-form-label">Seniority</label>
+                                            <div class="col-xs-8">
+                                                <select class="form-control" id="seniority-drop-down">
+                                            <option>Senior Unsecured</option>
+                                          </select>
+                                            </div>
+                                        </div>
+                                        <!--drop-down -->
+                                        <div class="form-group row">
+                                            <label for="currency-drop-down" class="col-xs-4 col-form-label">Currency</label>
+                                            <div class="col-xs-8">
+                                                <select class="form-control" id="currency-drop-down">
+                                            <option>USD</option>
+                                            <option>CAD</option>
+                                          </select>
+                                            </div>
+                                        </div>
+                                        <!--date-picker -->
+                                        <div class="form-group row">
+                                            <label for="maturity-date" class="col-xs-4 col-form-label">Maturity Date</label>
+                                            <div class="col-xs-8">
+                                                <div class='input-group date' id='maturity-date'>
+                                                    <input type='date' class="form-control" />
+                                                    <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--input-text -->
+                                        <div class="form-group row">
+                                            <label for="coupon-text-input" class="col-xs-4 col-form-label">Coupon</label>
+                                            <div class="col-xs-8">
+                                                <input class="form-control" type="text" value="" id="coupon-text-input">
+                                            </div>
+                                        </div>
+                                        <!--drop-down -->
+                                        <div class="form-group row">
+                                            <label for="day-count-drop-down" class="col-xs-4 col-form-label">Day Count</label>
+                                            <div class="col-xs-8">
+                                                <select class="form-control" id="day-count-drop-down">
+                                            <option>ACI/360</option>
+                                          </select>
+                                            </div>
+                                        </div>
+                                        <!--drop-down -->
+                                        <div class="form-group row">
+                                            <label for="buy-sell-drop-down" class="col-xs-4 col-form-label">Buy/Sell</label>
+                                            <div class="col-xs-8">
+                                            <select id="buy-sell-drop-down" class="form-control" onselect='do()'>
+                                            <option class="green" value="buy">BUY</option>
+                                            <option class="red" value="sell">SELL</option>
+                                          </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="col-xs-12">
+                                                <button class=" col-xs-12 col-sm-2 btn btn-primary pull-right">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- col 2 end-->
+                                </div>
+                            </div>
+  
+                            <div class="tab-pane" id="deal" role="tabpanel">
+							Content of deals goes here					
+							</div>
+                            <div class="tab-pane" id="fees" role="tabpanel">Fees Content goes here
+							</div>					
+						

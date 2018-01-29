@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CAAT</title>
+    <meta charset="utf-8" />
+    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="css/bootstrap/js/jquery-1.12.4.min.js"></script>
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+    <script src="css/bootstrap/js/moment-with-locales.js"></script>
+    <script src="css/bootstrap/js/bootstrap-datetimepicker.js"></script>
+    <script src="js/main.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/vertical-menu.css" rel="stylesheet" />
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.min.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script>
+        var paths = {
+            "rxjs/*": "node_modules/rxjs/bundles/Rx.min.js",
+            "@angular/*": "node_modules/@angular/*"
+        }
+        var packages = { "app": {} };
+        var angularModules = ["common", "compiler", "core", "forms",
+            "platform-browser", "platform-browser-dynamic"];
+        angularModules.forEach(function (pkg) {
+            packages["@angular/" + pkg] = {
+                main: "/bundles/" + pkg + ".umd.min.js"
+            };
+        });
+        System.config({ paths: paths, packages: packages });
+        System.import("app/main").catch(function(err){ console.error(err); });
+    </script>
+</head>
+<body class="m-a-1">
+    <caat-app></caat-app>
+</body>
+</html>
